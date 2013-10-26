@@ -5,6 +5,13 @@ gem 'rails', '3.2.14'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+#using thin server, better than webrick
+gem 'thin'
+
+#added to help including coffe files in pages, uncoment them when developing in ubunto, also edit app.js
+#gem 'therubyracer'
+#gem 'libv8', '3.3.10.4'
+
 group :development, :test do
 	gem 'sqlite3'
 end

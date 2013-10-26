@@ -1,4 +1,4 @@
-<% if current_user == @user %>
+<% if current_user %>
 	<%= render 'ribits/new_form' %>
 <% end %>
 
@@ -22,3 +22,5 @@
 		Ribits coming...
 	</div>
 </div>
+
+<%= javascript_include_tag 'ribits' %>
