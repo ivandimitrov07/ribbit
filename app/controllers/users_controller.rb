@@ -23,4 +23,13 @@ class UsersController < ApplicationController
 			).first_or_initialize if current_user
 	end
 
+	def index
+		@users = User.all
+		@ribit = Ribit.new
+		@relationship = Relationship.where(
+				follower_id: current_user.id,
+				followed_id: User.where(params[:id])
+			).first_or_initialize if current_user
+	end
+
 end

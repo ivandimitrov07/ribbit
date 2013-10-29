@@ -6,7 +6,6 @@ class RelationshipsController < ApplicationController
 
 		flash[:error] = "Couldn't follow" unless relationship.save
 		redirect_to relationship.followed
-		
 	end
 
 	def destroy
