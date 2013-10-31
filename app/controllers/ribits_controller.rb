@@ -9,7 +9,7 @@ class RibitsController < ApplicationController
 		ribit = Ribit.new(params[:ribit])
 		ribit.user_id = current_user.id
 
-		flash[:error] = "Ribbit is too long!" unless ribit.save
+		flash[:error] = "Ribbit is too short!" unless ribit.save
 		
 		redirect_to ribits_url
 	end
